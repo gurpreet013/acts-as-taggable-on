@@ -2,6 +2,7 @@
 module ActsAsTaggableOn
   class Tag < ::ActiveRecord::Base
     self.table_name = ActsAsTaggableOn.tags_table
+    acts_as_nested_set scope: [:type]
 
     ### ASSOCIATIONS:
 
